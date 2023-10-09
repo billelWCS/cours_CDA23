@@ -105,5 +105,89 @@ public class BaseJava {
             default:
                 System.out.println("Autre jour !");
         }
+
+        System.out.println("------------------------");
+        System.out.println(sayHello());
+
+        String msg = "ceci est un text";
+        afficheMessge(msg);
+
+        System.out.println(addition(11, 23));
+
+//        Les boucles
+//        while
+
+        int i = 0;
+//        while (i< 10){
+////            traitement
+//            System.out.println("intération : "+i);
+//            i++;
+//        }
+
+//        do While
+        int j = 0;
+//        do {
+//            System.out.println("intération : "+j);
+//            j++;
+//        }while (false);
+
+//        for
+
+        for (i = 9; i >= 0 ; i--){
+            System.out.println("itération : "+ i);
+        }
+
+//        for (i=0; i< words.length; i++){
+//            System.out.println(words[i]);
+//        }
+
+//        for each
+        for (String word : words ){
+            System.out.println(word);
+        }
+
+        int[] numbers = new int[50];
+
+        for (i = 0; i < numbers.length; i++){
+            numbers[i] = i+1;
+        }
+
+        sum = 0;
+
+//        numbers[0] : 1
+//        numbers[1] : 2
+//        numbers[2] : 3
+//        numbers[3] : 4
+//        numbers[4] : 5
+//        ...
+//        numbers[49] : 50
+
+
+        for (int valeur : numbers){
+            sum+= valeur;
+//            sum = sum + valeur;
+        }
+        System.out.println(sum);
+
     }
+
+    static String sayHello (){
+        System.out.println("je suis dans la fonction !");
+        return "Hello !";
+    }
+
+    static void afficheMessge (String text){
+        System.out.println(text);
+    }
+
+    static int addition (int nb1, int nb2){
+        return nb1 + nb2;
+    }
+
+    static int test (boolean bool){
+        if (bool)
+            return 1;
+        return 10;
+    }
+
 }
