@@ -1,8 +1,12 @@
 package lundi;
 
+import orienteObjet.Personne;
+
 public class BaseJava {
 
     public static void main (String [] args){
+        Personne p = new Personne("nom", "preom", 1900);
+
 
         final int ValMAx = 100;
 
@@ -173,10 +177,12 @@ public class BaseJava {
 
     static String sayHello (){
         System.out.println("je suis dans la fonction !");
+        afficheMessge("coucou");
+
         return "Hello !";
     }
 
-    static void afficheMessge (String text){
+     static void afficheMessge (String text){
         System.out.println(text);
     }
 

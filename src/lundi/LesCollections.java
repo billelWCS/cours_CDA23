@@ -16,6 +16,9 @@ public class LesCollections {
         list.add("Eliott");
         list.add(2, "Billel");
 
+        int indexOfEliott = list.indexOf("Eliot");
+        System.out.println("index of : " + indexOfEliott);
+
 //        list.add(19, "Test");
 
         ArrayList<String> list2 = new ArrayList<>();
@@ -76,23 +79,40 @@ public class LesCollections {
             System.out.println("divisible");
         }
 
+//        Création d'une liste de tableaux
         ArrayList<Integer[]> listOfTabs = new ArrayList<>();
-
-
+//        Création des tableaux
         Integer[] tab1 = {1,3,22,44};
         Integer[] tab2 = {1,3,44,44, 66, 44};
         Integer[] tab3 = {1,31,22,44};
         Integer[] tab4 = {1,355,22,44};
-
-        List<Integer> l1 = new ArrayList<>(Arrays.asList(tab1));
-        List<Integer> l2 = new ArrayList<>(Arrays.asList(tab2));
-        List<Integer> l3 = new ArrayList<>(Arrays.asList(tab3));
-        List<Integer> l4 = new ArrayList<>(Arrays.asList(tab4));
-
+//          Ajout des tableaux à la list
         listOfTabs.add(tab1);
         listOfTabs.add(tab2);
         listOfTabs.add(tab3);
         listOfTabs.add(tab4);
+
+//        Création d'une list de lists
+        List<List<Integer>> listOfLists = new ArrayList<>();
+//          Créations des lists
+        List<Integer> l1 = new ArrayList<>(Arrays.asList(tab1));
+        List<Integer> l2 = new ArrayList<>(Arrays.asList(tab2));
+        List<Integer> l3 = new ArrayList<>(Arrays.asList(tab3));
+        List<Integer> l4 = new ArrayList<>(Arrays.asList(tab4));
+//          Ajout des lists dans la list
+        listOfLists.add(l1);
+        listOfLists.add(l2);
+        listOfLists.add(l3);
+        listOfLists.add(l4);
+
+        tab4[1] = 999;
+        Integer val = listOfTabs.get(3)[1];
+        System.out.println("valeur : " + val);
+
+        l4.set(1, 999);
+        Integer val2 = listOfLists.get(3).get(1);
+        System.out.println("valeur 2 : " + val2);
+
 
         int sumNb;
         ArrayList<Integer> sumTabs = new ArrayList<>();
@@ -108,6 +128,5 @@ public class LesCollections {
 
 
     }
-
 
 }
