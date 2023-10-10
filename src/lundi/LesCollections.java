@@ -1,6 +1,7 @@
 package lundi;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class LesCollections {
@@ -51,6 +52,16 @@ public class LesCollections {
         numbersList.add(7);
         numbersList.add(10);
 
+        ArrayList<Integer> numbersToDelete = new ArrayList<>();
+
+        for (Integer number : numbersList){
+            if (number % 5 == 0){
+               numbersToDelete.add(number);
+            }
+        }
+        numbersList.removeAll(numbersToDelete);
+        System.out.println(numbersList);
+
         int sum = 0;
         for (Integer elt : numbersList){
            sum += elt ;
@@ -65,6 +76,38 @@ public class LesCollections {
             System.out.println("divisible");
         }
 
+        ArrayList<Integer[]> listOfTabs = new ArrayList<>();
+
+
+        Integer[] tab1 = {1,3,22,44};
+        Integer[] tab2 = {1,3,44,44, 66, 44};
+        Integer[] tab3 = {1,31,22,44};
+        Integer[] tab4 = {1,355,22,44};
+
+        List<Integer> l1 = new ArrayList<>(Arrays.asList(tab1));
+        List<Integer> l2 = new ArrayList<>(Arrays.asList(tab2));
+        List<Integer> l3 = new ArrayList<>(Arrays.asList(tab3));
+        List<Integer> l4 = new ArrayList<>(Arrays.asList(tab4));
+
+        listOfTabs.add(tab1);
+        listOfTabs.add(tab2);
+        listOfTabs.add(tab3);
+        listOfTabs.add(tab4);
+
+        int sumNb;
+        ArrayList<Integer> sumTabs = new ArrayList<>();
+
+        for (Integer[] tab : listOfTabs){
+            sumNb = 0;
+            for (int value : tab){
+                sumNb += value;
+            }
+            sumTabs.add(sumNb);
+        }
+        System.out.println(sumTabs);
+
 
     }
+
+
 }
